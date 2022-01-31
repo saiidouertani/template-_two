@@ -5,6 +5,12 @@
 :root {
   --transparent-color: rgb(15 116 143 / 70%);
   --main-color: #00cfff;
+  --html-css: 85%;
+  --html-csss: "85%";
+  --javascript: 80%;
+  --javascripts: "80%";
+  --php: 90%;
+  --phps: "90%";
 }
 html {
   scroll-behavior: smooth;
@@ -365,11 +371,11 @@ nav::after {
   width: fit-content;
 }
 .card:hover img {
-  transform: scalex(1.2);
-  -webkit-transform: scalex(1.5);
-  -moz-transform: scalex(1.2);
-  -ms-transform: scalex(1.2);
-  -o-transform: scalex(1.2);
+  transform: rotateX(25deg);
+  -webkit-transform: scalex(1.2) rotateX(25deg);
+  -moz-transform: scalex(1.2) rotateX(25deg);
+  -ms-transform: scalex(1.2) rotateX(25deg);
+  -o-transform: scalex(1.2) rotateX(25deg);
   max-width: 100%;
   overflow: hidden;
 }
@@ -428,6 +434,8 @@ nav::after {
 
 .stat {
   background-image: url(../images/stats.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
   display: flex;
   align-items: center;
@@ -469,12 +477,380 @@ nav::after {
   color: white;
 }
 .about .sectiontwo {
+  margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 10px;
 }
+.about .sectiontwo .testmonia {
+  padding: 60px;
+}
 
+.about .sectiontwo .testmonia > p:first-child {
+  width: fit-content;
+  margin: 10px auto;
+  text-align: center;
+  font-weight: bold;
+}
+.about .sectiontwo .testdesc {
+  color: #777;
+  text-align: center;
+  margin-top: 30px;
+}
+.about .sectiontwo .cv {
+  display: flex;
+  margin-top: 50px;
+}
+.about .sectiontwo .cv img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.about .sectiontwo .cv .desc {
+  border-bottom: 1px solid #777;
+  margin-left: 15px;
+}
+.about .sectiontwo .cv .desc p:last-child {
+  text-align: right;
+  color: #777;
+  margin-top: 10px;
+}
+.about .sectiontwo .cerclepage {
+  width: fit-content;
+  margin: 30px auto;
+  display: flex;
+}
+.about .sectiontwo .cerclepage span {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-left: 10px;
+}
+.active {
+  background-color: var(--main-color);
+}
+.about .sectiontwo .skillsdetail {
+}
+.about .sectiontwo .skillsdetail div p:first-child {
+  margin-top: 10px;
+}
+.about .sectiontwo .skillsdetail div div:last-child {
+  width: 100%;
+  height: 30px;
+  background-image: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--main-color) 90%,
+    #eee 90%
+  );
+  margin-top: 20px;
+  position: relative;
+}
+
+.about .sectiontwo .skillsdetail div div:last-child::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border: 15px solid transparent;
+  border-top-color: black;
+  left: calc(90% - 15px);
+  top: -20px;
+}
+.about .sectiontwo .skillsdetail div div:last-child::before {
+  content: "90%";
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding: 2px;
+  width: 40px;
+  border-radius: 5px;
+  height: 20px;
+  background-color: black;
+  left: calc(90% - 22px);
+  top: -35px;
+  z-index: 1;
+}
+.about .sectiontwo .skillsdetail .htmlcss div:last-child {
+  background-image: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--main-color) var(--html-css),
+    #eee var(--html-css)
+  );
+}
+.about .sectiontwo .skillsdetail .htmlcss div:last-child::after {
+  left: calc(var(--html-css) - 15px);
+}
+.about .sectiontwo .skillsdetail .htmlcss div:last-child::before {
+  content: var(--html-csss);
+
+  left: calc(var(--html-css) - 22px);
+}
+.about .sectiontwo .skillsdetail .javascript div:last-child {
+  background-image: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--main-color) var(--javascript),
+    #eee var(--javascript)
+  );
+}
+.about .sectiontwo .skillsdetail .javascript div:last-child::after {
+  left: calc(var(--javascript) - 15px);
+}
+.about .sectiontwo .skillsdetail .javascript div:last-child::before {
+  content: var(--javascripts);
+
+  left: calc(var(--javascript) - 22px);
+}
+.about .sectiontwo .skillsdetail .PHP div:last-child {
+  background-image: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--main-color) var(--php),
+    #eee var(--php)
+  );
+}
+.about .sectiontwo .skillsdetail .PHP div:last-child::after {
+  left: calc(var(--php) - 15px);
+}
+.about .sectiontwo .skillsdetail .PHP div:last-child::before {
+  content: var(--phps);
+
+  left: calc(var(--php) - 22px);
+}
+.lecon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.793),
+      rgba(27, 24, 24, 0.904) 100%
+    ),
+    url(../images/quote.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 300px;
+}
+.lecon .text q {
+  font-size: 24px;
+}
+.lecon .text p {
+  margin-top: 15px;
+}
 /* end about style */
+/* Start Pricing Style */
+.pricingdetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.pricingdetails .card {
+  text-transform: capitalize;
+}
+.pricingdetails .card .titleprice {
+  padding: 40px;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  text-align: center;
+}
+.pricingdetails .card .titleprice div:first-child {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.pricingdetails .card .titleprice div:last-child span:first-of-type {
+  font-size: 60px;
+  font-size: bold;
+}
+.card sup {
+  font-size: initial;
+}
+.pricingdetails .card p {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--main-color);
+  width: fit-content;
+  margin: 5px auto;
+}
+.pricingdetails .card p:last-of-type {
+  width: 100%;
+}
+.pricingdetails .card > div:last-child {
+  padding: 20px;
+  width: fit-content;
+  margin: 20px auto;
+  border: 1px solid var(--main-color);
+  color: blueviolet;
+  text-align: center;
+}
+.pricing .contactus {
+  width: fit-content;
+  margin: 80px auto;
+}
+.pricing .contactus div:first-of-type {
+  font-weight: bold;
+}
+.pricing .contactus div:last-of-type {
+  padding: 20px;
+  background-color: var(--main-color);
+  width: fit-content;
+  margin: 20px auto;
+  color: white;
+}
+/* End Princing Style */
+/* start email*/
+.email {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/subscribe.jpg");
+  color: white;
+}
+
+.email .emaildetail .input {
+  width: fit-content;
+  height: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.email .emaildetail .input i {
+  line-height: 0px;
+  padding: 20px;
+  border: 1px solid white;
+  border-right-color: transparent;
+}
+.email .emaildetail .input input {
+  background-color: transparent;
+  padding: 20px;
+  position: relative;
+  color: white;
+  border: 1px solid white;
+  border-left-color: transparent;
+  left: -2px;
+}
+.email .emaildetail .input input::placeholder {
+  position: absolute;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  left: 40px;
+}
+.email .emaildetail .input div {
+  text-align: center;
+  padding: 20px;
+  line-height: 0px;
+  background-color: var(--main-color);
+  color: white;
+  border: 1px solid white;
+  border-left-color: transparent;
+  position: relative;
+  left: -3px;
+}
+.email p {
+  margin-left: 20px;
+}
+
+/* End email */
+
+/* Start contact */
+.contact .form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
+}
+.contact .form input,
+.contact .form textarea {
+  margin-top: 40px;
+}
+.contact .form input[type="submit"] {
+  width: 25%;
+  margin: 20px 75%;
+  padding: 15px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+}
+.contact .form .part2 {
+  padding: 30px;
+}
+.contact .form .part2 .element2 {
+  margin-top: 100px;
+}
+.contact .form .part2 .titl {
+  font-weight: bold;
+}
+.contact .form .part2 p {
+  margin-top: 20px;
+  color: #777;
+}
+@media (max-width: 780px) {
+  .contact .form .part2 {
+    grid-area: 1/1/2/2;
+    text-align: center;
+  }
+}
+.contact .form input,
+.contact .form textarea {
+  display: block;
+  width: 100%;
+}
+/* End contact style */
+
+footer {
+  background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.438) 100%),
+    url("../images/subscribe.jpg");
+  color: white;
+  height: 300px;
+}
+footer .img {
+  width: fit-content;
+  margin: 0px auto;
+}
+footer img {
+  margin-top: 30px;
+}
+
+footer p {
+  font-size: 26px;
+  padding: 20px;
+  width: fit-content;
+  border-bottom: 1px solid white;
+  margin: 10px auto;
+}
+footer .Symbole {
+  margin: 5px auto;
+  width: fit-content;
+}
+footer .Symbole i {
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+footer div:last-child {
+  margin: 50px auto;
+  width: fit-content;
+}
+footer div:last-child span {
+  color: var(--main-color);
+  font-weight: bold;
+}
 
 /* start component */
 .mainheading h1 {

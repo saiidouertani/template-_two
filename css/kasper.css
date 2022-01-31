@@ -348,11 +348,12 @@ nav::after {
 .portfolio .card img {
   max-width: 100%;
 }
+
 .card .imagedecs {
   padding: 20px;
   position: absolute;
   width: 100%;
-  background-color: blanchedalmond;
+  background-color: white;
   bottom: -70px;
   transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -363,19 +364,25 @@ nav::after {
 .card .imagesdesc div {
   color: var(--main-color);
 }
+
 .portfolio .more {
   padding: 20px;
   background-color: var(--main-color);
   color: white;
   margin: 50px auto;
   width: fit-content;
+  cursor: pointer;
+}
+.more a{
+  text-decoration: none;
+  color: white;
 }
 .card:hover img {
-  transform: rotateX(25deg);
-  -webkit-transform: scalex(1.2) rotateX(25deg);
-  -moz-transform: scalex(1.2) rotateX(25deg);
-  -ms-transform: scalex(1.2) rotateX(25deg);
-  -o-transform: scalex(1.2) rotateX(25deg);
+  transform: rotate(5deg) scale(1.2);
+  -webkit-transform: rotate(5deg) scale(1.2);
+  -moz-transform: rotate(5deg) scale(1.2);
+  -ms-transform: rotate(5deg) scale(1.2);
+  -o-transform: rotate(5deg) scale(1.2);
   max-width: 100%;
   overflow: hidden;
 }
@@ -647,6 +654,7 @@ nav::after {
 .lecon .text q {
   font-size: 24px;
 }
+
 .lecon .text p {
   margin-top: 15px;
 }
@@ -659,6 +667,7 @@ nav::after {
 }
 .pricingdetails .card {
   text-transform: capitalize;
+  background-color: #fcfcfc;
 }
 .pricingdetails .card .titleprice {
   padding: 40px;
@@ -719,7 +728,11 @@ nav::after {
   background-image: url("../images/subscribe.jpg");
   color: white;
 }
-
+@media (max-width: 880px) {
+  .email {
+    flex-wrap: wrap;
+  }
+}
 .email .emaildetail .input {
   width: fit-content;
   height: 40px;
